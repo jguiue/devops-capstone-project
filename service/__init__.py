@@ -9,8 +9,13 @@ from flask import Flask
 from service import config
 from service.common import log_handlers
 
+#Added by me
+from flask_talisman import Talisman
+
 # Create Flask application
 app = Flask(__name__)
+#Talisman added by me just next line
+talisman = Talisman(app)
 app.config.from_object(config)
 
 # Import the routes After the Flask app is created
