@@ -63,7 +63,6 @@ class TestAccountService(TestCase):
     #  H E L P E R   M E T H O D S
     ######################################################################
 
-
     def _create_accounts(self, count):
         """Factory method to create accounts in bulk"""
         accounts = []
@@ -83,7 +82,6 @@ class TestAccountService(TestCase):
     ######################################################################
     #  A C C O U N T   T E S T   C A S E S
     ######################################################################
-
 
     def test_index(self):
         """It should get 200_OK from the Home Page"""
@@ -134,10 +132,9 @@ class TestAccountService(TestCase):
         )
         self.assertEqual(response.status_code, status.HTTP_415_UNSUPPORTED_MEDIA_TYPE)
 
-    # ADD YOUR TEST CASES HERE ...  
-    # READ ACCOUNT 
+    # ADD YOUR TEST CASES HERE ...
+    # READ ACCOUNT
 
- 
     def test_get_account(self):
         """It should Read a single Account"""
         account = self._create_accounts(1)[0]
